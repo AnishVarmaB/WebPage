@@ -1,15 +1,28 @@
-body{
-    background-color: black;
+/* Header Styles */
+header {
+    background-color: mediumpurple;
+    padding: 10px;
+    text-align: center;
 }
-h1{
-    color: white;
+
+/* Footer Styles */
+footer {
+    background-color: mediumpurple;
+    padding: 10px;
+    text-align: center;
 }
-h4{
-    color: white;
+
+/* Main Content Styles */
+main {
+    margin: 20px;
+    text-align: center;
 }
-span{
-    color: white;
+
+main h4 {
+    color: #555;
 }
-footer{
-    color: white;
+
+main img {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
