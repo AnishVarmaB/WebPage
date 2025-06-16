@@ -1,55 +1,38 @@
-body{
+/* General Styles */
+body {
     background-color: rgb(0, 0, 0);
-    animation-name: colorChange;
-    animation-duration: 10s;
-    animation-play-state: running;
-    animation-iteration-count: infinite;
-}
-h1{
-    color: white;
-    animation-name: glow;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-play-state: running;
-    animation-timing-function: ease-in-out;
-}
-h4{
-    color: white;
-}
-span{
-    color: white;
-}
-footer{
-    color: white;
-}
-main{
-    animation-name: fadeIn;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-play-state: running;
-    animation-timing-function: ease-in-out;
-    
+    animation: colorChange 10s infinite ease-in-out;
 }
 
-@keyframes glow{
-    50%{box-shadow: 0px 0px 50px hsl(0, 0%, 0%)}
+h1 {
+    color: white;
+    animation: glow 10s infinite ease-in-out;
 }
-@keyframes slideLeft{
-    from{transform: translateX(200%);}
+
+h4, span, footer {
+    color: white;
 }
-@keyframes colorChange{
-    0%{background-color: hsl(0, 100%, 62%)}
-    20%{background-color: hsl(35, 100%, 62%)}
-    40%{background-color: hsl(63, 100%, 62%)}
-    60%{background-color: hsl(103, 100%, 62%)}
-    80%{background-color: hsl(201, 100%, 62%)}
-    100%{background-color: hsl(0, 0%, 0%)}
+
+main {
+    animation: fadeIn 5s infinite ease-in-out;
 }
-@keyframes rotate{
-    to{transform: translateX(100px) rotateZ(360deg) scale(1)}
+
+/* Keyframes */
+@keyframes glow {
+    0%, 100% { box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); }
+    50% { box-shadow: 0px 0px 50px rgba(255, 255, 255, 1); }
 }
-@keyframes fadeIn{
-    100%{opacity: 0}
+
+@keyframes colorChange {
+    0% { background-color: hsl(0, 100%, 62%); }
+    20% { background-color: hsl(35, 100%, 62%); }
+    40% { background-color: hsl(63, 100%, 62%); }
+    60% { background-color: hsl(103, 100%, 62%); }
+    80% { background-color: hsl(201, 100%, 62%); }
+    100% { background-color: hsl(0, 0%, 0%); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
